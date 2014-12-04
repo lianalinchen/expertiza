@@ -348,6 +348,8 @@ Expertiza::Application.routes.draw do
     end
   end
 
+  resources :student_quizzes, :only => [:index]
+
   resources :student_review do
     collection do
       get :list
