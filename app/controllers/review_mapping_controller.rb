@@ -1,7 +1,6 @@
 class ReviewMappingController < ApplicationController
   autocomplete :user, :name
   #use_google_charts
-  require 'gchart'
   helper :dynamic_review_assignment
   helper :submitted_content
 
@@ -618,13 +617,7 @@ class ReviewMappingController < ApplicationController
       end
     end
 
-    #dataset2 = GoogleChartDataset.new :data => @review_distribution, :color => '9A0000'
-    #data2 = GoogleChartData.new :datasets => [dataset2]
-    #axis2 = GoogleChartAxis.new :axis  => [GoogleChartAxis::BOTTOM, GoogleChartAxis::LEFT]
-
-    #@chart2 = GoogleBarChart.new :width => 500, :height => 200
-    #@chart2.data = data2
-    #@chart2.axis = axis2
+    
     @chart2 = Gchart.bar(:data =>@review_distribution, :size => '500x200')
 
     end
