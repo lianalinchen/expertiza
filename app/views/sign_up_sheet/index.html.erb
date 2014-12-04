@@ -1,0 +1,5 @@
+<% if @assignment.staggered_deadline %>
+    <%= render 'index_staggered' %>
+<% else %>
+    <%= render 'index' %>
+<% end %>

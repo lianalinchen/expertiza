@@ -325,18 +325,11 @@ Expertiza::Application.routes.draw do
 
   resources :sign_up_sheet do
     collection do
-      get :signup
-      get :delete_signup
-      get :add_signup_topics
-      get :add_signup_topics_staggered
-      get :delete_signup
-      get :edit
-      get :list
-      get :signup_topics
-      get :signup
-      get :sign_up
-      get :team_details
+      get :index_signup
+      post :create_signup
+      delete :destroy_signup
       get :view_publishing_rights
+      post :save_topic_dependencies
     end
   end
 
