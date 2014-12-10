@@ -617,7 +617,7 @@ class ReviewMappingController < ApplicationController
       end
     end
 
-    
+
     @chart2 = Gchart.bar(:data =>@review_distribution, :size => '500x200')
 
     end
